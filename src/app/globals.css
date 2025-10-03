@@ -3,10 +3,16 @@
 :root {
   /* background */
   --background: #fefefe;
+  --background-banner: #ececec66;
   --foreground: #32407b;
   --dark-bg: #070d27;
   --btn-bg: #be968e;
 
+  /* images */
+  --color-mainCard: #f5f5f5;
+  --progres-select: #d4d4d4;
+  ----progres-bg-first: #f4f4f4;
+  ----progres-bg-last: #0000004d;
   /* text colors */
   --text-color: #020202;
   --text-btn-color: #ffffff;
@@ -36,8 +42,12 @@
   --shadow-input: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
     0px 1px 0px 0px rgba(25, 28, 33, 0.02),
     0px 0px 0px 1px rgba(25, 28, 33, 0.08);
-  --btn-background: var(--btn-background);
+  --color-banner: var(--background-banner);
   --color-black-text: var(--text-color);
+  --color-mainCard: var(--color-mainCard);
+  --color-progres-select: var(--progres-select);
+  --color-progres-isSelect: var(--text-btn-color);
+  --color-pink-btn: var(--btn-bg);
 }
 
 @layer components {
@@ -78,6 +88,10 @@
 
   .navIcon {
     color: var(--text-color);
+  }
+
+  .banner {
+    @apply font-medium text-[12px] md:text-[16px] text-[#020202];
   }
 }
 

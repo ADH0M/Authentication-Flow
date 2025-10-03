@@ -14,7 +14,6 @@ export interface SingupInitialState {
   errors?: SingupErrors;
 }
 
-
 export interface LoginErrors {
   email?: string[];
   password?: string[];
@@ -25,3 +24,31 @@ export interface LoginInitialState {
   message: string;
   errors?: LoginErrors;
 }
+
+export interface ProductCardProps {
+  activeThumb: number;
+  setActiveThumb: (index: number) => void;
+  thumbnails: string[];
+}
+
+
+export interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  comment: string;
+  date: string;
+};
+
+
+export interface StarRatingProps  {
+  rating: number; 
+  reviewId?: string;
+  size?: number; 
+};
+
+
+export interface RatingBarProps  {
+  star: number; 
+  percentage: number; 
+};

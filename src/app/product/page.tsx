@@ -1,10 +1,13 @@
+import Banner from "@/components/Banner";
+import ProductDetails from "@/components/product";
+import RatingReviewsPage from "@/components/Rating";
 import Navbar from "@/components/ui/Navbar";
 import Image from "next/image";
 import React from "react";
 
 const page = () => {
   return (
-    <div className=" w-full min-h-screen  ">
+    <div className="  ">
       <Navbar />
       <section className="grid place-items-center">
         <Image
@@ -23,9 +26,14 @@ const page = () => {
           <h2 className="productDetailsBg z-40 select-none ">
             Product Details
           </h2>
-          <h4 className="z-50 text-black-text absolute text-2xl">Product Details</h4>
+          <h4 className="z-50 text-black-text absolute text-2xl">
+            Product Details
+          </h4>
         </div>
       </section>
+      <Banner/>
+      <ProductDetails/>
+      <RatingReviewsPage/>
     </div>
   );
 };
