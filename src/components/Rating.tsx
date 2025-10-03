@@ -97,8 +97,6 @@ const RatingReviewsPage: React.FC = () => {
           </button>
         </div>
       </div>
-
-      <div className="h-screen" />
     </section>
   );
 };

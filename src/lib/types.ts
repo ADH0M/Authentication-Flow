@@ -27,7 +27,7 @@ export interface LoginInitialState {
 
 export interface ProductCardProps {
   activeThumb: number;
-  setActiveThumb: (index: number) => void;
+  setActiveThumb: React.Dispatch<React.SetStateAction<number>>;
   thumbnails: string[];
 }
 

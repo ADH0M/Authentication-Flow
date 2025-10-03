@@ -26,11 +26,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           <div className="relative flex justify-center items-center rounded-lg overflow-hidden">
             <Image
-              src={thumbnails[activeThumb]}
+              src={'/img/main.png'}
               alt="product"
               width={305}
               height={514}
-              className="object-contain md:h-[470px] md:w-[305px] h-[381px] w-[350px]  bg-mainCard"
+              className="object-cover md:h-[470px] md:w-[305px] h-[381px] w-[350px] bg-mainCard"
             />
 
             {/* Nav arrows (visual only) */}
@@ -75,9 +75,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 />
               </button>
               {i === thumbnails.length - 1 && (
-                <p className="absolute inset-0 flex justify-center items-center text-center bg-black/60
-                 text-white text-sm px-2 py-1 rounded-2xl">
-                    <span className="block">+2</span>
+                <p
+                  className="absolute inset-0 flex justify-center items-center text-center bg-black/60
+                 text-white text-sm px-2 py-1 rounded-2xl"
+                >
+                  <span className="block">+2</span>
                 </p>
               )}
             </div>

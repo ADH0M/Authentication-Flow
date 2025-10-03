@@ -1,6 +1,8 @@
 import Banner from "@/components/Banner";
+import FooterSection from "@/components/Footer";
 import ProductDetails from "@/components/product";
 import RatingReviewsPage from "@/components/Rating";
+import SimilarItemsSection from "@/components/SimilarSection";
 import Navbar from "@/components/ui/Navbar";
 import Image from "next/image";
 import React from "react";
@@ -34,6 +36,8 @@ const page = () => {
       <Banner/>
       <ProductDetails/>
       <RatingReviewsPage/>
+      <SimilarItemsSection/>
+      <FooterSection/>
     </div>
   );
 };
