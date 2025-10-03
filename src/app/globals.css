@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* background */
+  --background: #fefefe;
+  --foreground: #32407b;
+  --dark-bg: #070d27;
+  --btn-bg: #be968e;
+
+  /* text colors */
+  --text-color: #020202;
+  --text-btn-color: #ffffff;
+  --text-nav-color: #8a8a8a;
+
+  /* typography */
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-weight-normal: 400;
+  --font-style-regular: normal;
+  --font-size-base: 13px;
+  --line-height-base: 100%;
+  --letter-spacing-base: 0%;
+
+  --font-weight-details: 700;
+  --font-style-details: bold;
+  --font-size-details: 80px;
+
+  --font-weight-text: 600;
+  --font-size-text: 32px;
 }
 
 @theme inline {
@@ -10,14 +33,60 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --shadow-input: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --btn-background: var(--btn-background);
+  --color-black-text: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .navText {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-regular);
+    font-size: 10px;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    color: var(--text-nav-color);
+  }
+
+  .productDetailsBg {
+    font-size: 80px;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-color: white;
+    width: 100%;
+    opacity: 40%;
+    font-weight: 600;
+    font-size: 80px;
+    font-family: var(--font-family-poppins);
+  }
+  .productText {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-text);
+    font-size: var(--font-size-text);
+  }
+
+  @media (min-width: 1024px) {
+    .navText {
+      font-size: var(--font-size-base);
+    }
+  }
+
+  .navIcon {
+    color: var(--text-color);
   }
 }
+
+/* @media (prefers-color-scheme: lig) {
+  :root {
+    --background: var(--dark-bg);
+    --foreground: #ededed;
+  }
+} */
 
 body {
   background: var(--background);
