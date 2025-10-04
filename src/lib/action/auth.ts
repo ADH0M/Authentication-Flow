@@ -5,17 +5,6 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { LoginErrors, SingupErrors } from "../types";
 
-type SignupFormState = {
-  message?: string;
-  errors?: {
-    username?: string[];
-    email?: string[];
-    phone?: string[];
-    password?: string[];
-    confirmPassword?: string[];
-    general?: string;
-  };
-};
 
 export async function signUpAction(
   prevState: any,
@@ -78,8 +67,8 @@ export async function signUpAction(
       hasErrors = true;
     }
 
-    // Optional: Validate against known country codes
-    const validCountryCodes = new Set(["EG", "US", "UK", "GB", "FR", "JP"]);
+    // Optional: Validate                EG    ARE   FRA    QAT  
+    const validCountryCodes = new Set(["+20", "971", "33", "974"]);
 
     if (!validCountryCodes.has(countryCode)) {
       errors.countryCode = [
@@ -140,6 +129,7 @@ export async function signUpAction(
 
   redirect("/login");
 }
+
 export async function loginAction(
   prevState: any,
   formData: FormData
