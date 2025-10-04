@@ -208,7 +208,7 @@ export default function LoginFormDemo() {
           aria-busy={isPending}
         >
           {isPending ? (
-            <span className="block w-5 h-5 border-r-2 animate-spin border-r-indigo-500 text-blue-500 px-2 py-1 rounded-full" />
+            <span className="block w-5 h-5 border-r-2 animate-spin border-r-indigo-50 text-blue-500 px-2 py-1 rounded-full" />
           ) : (
             "Sign in →"
           )}

@@ -10,12 +10,10 @@ export default function UserDashboard() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check auth on mount
     const token = localStorage.getItem("token");
     const storedUserName = localStorage.getItem("userName");
 
     if (!token || !storedUserName) {
-      // Redirect to login if not authenticated
       router.push("/login");
       return;
     }
@@ -24,35 +22,37 @@ export default function UserDashboard() {
     setIsLoading(false);
   }, [router]);
 
+  // Show spinner on #f5f5f5 background while loading
   if (isLoading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50 ">
-        <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"></div>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">Loading...</p>
-        </div>
+      <div className="flex min-h-screen items-center justify-center bg-[#f5f5f5]">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"></div>
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-4 ">
-      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-input ">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#f5f5f5] p-4">
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-input">
+        <h1 className="text-2xl font-bold text-gray-900">
           Welcome, <span className="text-blue-600">{userName}</span>!
         </h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-400">
+        <p className="mt-2 text-gray-600">
           You are logged in and viewing your dashboard.
         </p>
 
-        <div>
-          <Link href={'/product'}>go product page</Link>
+        <div className="mt-6">
+          <Link
+            href="/product"
+            className="block rounded-2xl bg-indigo-300 py-3 text-center text-2xl font-medium text-white hover:opacity-60"
+          >
+            Go to Product Page
+          </Link>
         </div>
 
         <div className="mt-6">
           <button
             onClick={() => {
-              // Logout: clear localStorage and redirect
               localStorage.removeItem("token");
               localStorage.removeItem("userName");
               router.push("/login");

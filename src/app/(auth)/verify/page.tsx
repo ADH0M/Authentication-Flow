@@ -248,10 +248,10 @@ export default function VerifyPage() {
                     inputRefs.current[index] = el;
                   }}
                   className="h-14 w-12 rounded-lg border border-gray-300
-                   bg-white text-center text-xl font-bold shadow-sm 
+                   bg-white text-center text-xl text-indigo-500 font-bold shadow-sm 
                    focus:border-blue-500 focus:outline-none focus:ring-1
                     focus:ring-blue-500 
-                     dark:text-white"
+                     "
                   disabled={isLoading || success}
                   aria-label={`Digit ${index + 1}`}
                 />
@@ -269,7 +269,7 @@ export default function VerifyPage() {
               {isLoading ? (
                 <span
                   className="block h-5 w-5 animate-spin rounded-full border-r-2
-                 border-r-indigo-500"
+                 border-r-indigo-50"
                 />
               ) : (
                 "Verify Account"

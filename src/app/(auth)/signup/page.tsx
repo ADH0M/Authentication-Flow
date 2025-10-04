@@ -36,7 +36,6 @@ function SignupFormDemo() {
     confirmPassword: "",
     countryCode: "US", // default
     mobile: "",
-    terms: false,
   });
   const router = useRouter();
   const [isPending, setIsPending] = useState(false);
@@ -66,7 +65,6 @@ function SignupFormDemo() {
       confirmPassword,
       countryCode,
       mobile,
-      terms,
     } = formData;
 
     // --- validation (you already had it) ---
@@ -90,11 +88,6 @@ function SignupFormDemo() {
       }
     }
 
-    if (!terms) {
-      setState({ message: "You must agree to the Terms and Conditions." });
-      setIsPending(false);
-      return;
-    }
 
     if (Object.keys(errors).length > 0) {
       setState({ errors });
@@ -322,7 +315,8 @@ function SignupFormDemo() {
           disabled={isPending}
         >
           {isPending ? (
-            <span className="block w-5 h-5 border-r-2 animate-spin border-r-indigo-500 text-blue-500 px-2 py-1 rounded-full" />
+            <span className="block w-5 h-5 border-r-2 animate-spin border-r-indigo-50
+             text-blue-500 px-2 py-1 rounded-full" />
           ) : (
             "Sign up"
           )}

@@ -7,6 +7,7 @@ import {
   AboutIcon,
   CategoryIcon,
   ContactIcon,
+  DownIcon,
   FaqIcon,
   HeartIcon,
   HomeIcon,
@@ -22,26 +23,32 @@ const Navbar = () => {
   // Navigation items
   const navItems = [
     { name: "Home", href: "/", icon: HomeIcon },
-    { name: "Our Category", href: "/category", icon: CategoryIcon },
-    { name: "About Us", href: "/about", icon: AboutIcon },
-    { name: "Contact Us", href: "/contact", icon: ContactIcon },
-    { name: "FAQs", href: "/faqs", icon: FaqIcon },
+    { name: "Our Category", href: "", icon: CategoryIcon },
+    { name: "About Us", href: "", icon: AboutIcon },
+    { name: "Contact Us", href: "", icon: ContactIcon },
+    { name: "FAQs", href: "", icon: FaqIcon },
   ];
 
   // Icon Section Component
   const IconSection = () => (
-    <div className="flex items-center  md:space-x-3 lg:space-x-4">
-      <button className="p-1 navIcon rounded-full hover:bg-gray-100 transition-colors">
+    <div className="flex items-center  md:space-x-1 lg:space-x-2">
+      <button className="p-1 navIcon cursor-pointer  transition-colors">
         <ShopIcon />
       </button>
-      <button className="p-1 navIcon rounded-full hover:bg-gray-100 transition-colors">
+      <button className="p-1 navIcon  cursor-pointer  transition-colors">
         <NotificationIcon />
       </button>
-      <button className="p-1 navIcon rounded-full hover:bg-gray-100 transition-colors">
+      <button className="p-1 navIcon  cursor-pointer  transition-colors">
         <HeartIcon />
       </button>
-      <button className="p-1 navIcon rounded-full hover:bg-gray-100 transition-colors">
+      <button className="items-center justify-center flex navIcon cursor-pointer transition-colors">
+        <span className="text-sm mx-0.5">EN</span>
+        <DownIcon className="w-3 h-3 " />
+      </button>
+
+      <button className="p-1 navIcon  items-center justify-center flex cursor-pointer transition-colors">
         <UserIcon />
+        <DownIcon className="w-3 h-3 " />
       </button>
     </div>
   );

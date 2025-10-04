@@ -17,7 +17,8 @@ const page = () => {
           height={100}
           alt=""
           src={"/img/navSection.jpg"}
-          className="min-w-full grayscale opacity-5 object-cover   col-start-1 col-end-3 row-start-1 row-end-2
+          className="min-w-full grayscale opacity-5 object-cover  
+           col-start-1 col-end-3 row-start-1 row-end-2
         h-[186px]  z-10"
         />
 

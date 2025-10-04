@@ -56,9 +56,8 @@ export interface FormDataType {
   email: string;
   password: string;
   confirmPassword: string;
-  countryCode: string; // ISO code (e.g., "US")
+  countryCode: string; 
   mobile: string;
-  terms: boolean;
 }
 
 export interface FormStateType {

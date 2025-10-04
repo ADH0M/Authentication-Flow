@@ -70,13 +70,13 @@ const SimilarItemsSection: React.FC = () => {
               <div className="space-y-1">
                 <p className=" flex justify-between">
                   <span className="text-xs block text-[#545454]">Dresses</span>
-                  <div className="flex items-center gap-1">
+                  <span className="flex items-center gap-1">
                     <span className="text-[#BE968E]">
                       <StarIcon />
                     </span>
                     <span className="text-xs text-[#020202]">4.5</span>
                     <span className="text-xs text-[#545454]">(2910)</span>
-                  </div>
+                  </span>
                 </p>
 
                 <h3 className="text-sm text-[#020202] font-medium line-clamp-2">
