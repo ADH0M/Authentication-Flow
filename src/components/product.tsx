@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ProdcutCard from "./ui/ProdcutCard";
-import { ShopAddIcon, ShopIcon } from "./ui/Icons";
+import {  ShopIcon } from "./ui/Icons";
 
 const colors = [
   { name: "Red", class: "bg-[#D90202]" },
@@ -31,9 +31,7 @@ export default function ProductPage() {
         {/* Left: Images */}
         <ProdcutCard
           activeThumb={activeThumb}
-          setActiveThumb={setActiveThumb}
-          thumbnails={thumbnails}
-        />
+          setActiveThumb={setActiveThumb}        />
         {/* Right: Details */}
         <div className="flex-1 w-1/2 flex flex-col justify-between ">
           <div>

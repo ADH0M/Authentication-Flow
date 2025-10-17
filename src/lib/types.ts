@@ -28,7 +28,6 @@ export interface LoginInitialState {
 export interface ProductCardProps {
   activeThumb: number;
   setActiveThumb: React.Dispatch<React.SetStateAction<number>>;
-  thumbnails: string[];
 }
 
 export interface Review {
